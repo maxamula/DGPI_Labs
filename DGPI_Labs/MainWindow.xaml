@@ -6,7 +6,15 @@
         xmlns:local="clr-namespace:DGPI_Labs"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <StackPanel VerticalAlignment="Center">
+        <Label Content="Label:" HorizontalAlignment="Center"/>
+        <TextBox Text="TextBox" HorizontalAlignment="Stretch" Margin="40, 0"/>
+        <TextBox Text="TextBox" HorizontalAlignment="Stretch" Margin="40, 0"/>
+        <TextBox Text="TextBox" HorizontalAlignment="Stretch" Margin="40, 0"/>
+        <TextBox Text="TextBox" HorizontalAlignment="Stretch" Margin="40, 0"/>
+        <TextBox Text="TextBox" HorizontalAlignment="Stretch" Margin="40, 0"/>
+        <TextBox Text="TextBox" HorizontalAlignment="Stretch" Margin="40, 0"/>
+        <Button Content="Button" HorizontalAlignment="Center" Width="300"/>
         
-    </Grid>
+    </StackPanel>
 </Window>
