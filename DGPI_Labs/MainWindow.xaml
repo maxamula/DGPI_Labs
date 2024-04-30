@@ -6,15 +6,22 @@
         xmlns:local="clr-namespace:DGPI_Labs"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <StackPanel VerticalAlignment="Center">
-        <Label Content="Label:" HorizontalAlignment="Center"/>
-        <TextBox Text="TextBox" HorizontalAlignment="Stretch" Margin="40, 0"/>
-        <TextBox Text="TextBox" HorizontalAlignment="Stretch" Margin="40, 0"/>
-        <TextBox Text="TextBox" HorizontalAlignment="Stretch" Margin="40, 0"/>
-        <TextBox Text="TextBox" HorizontalAlignment="Stretch" Margin="40, 0"/>
-        <TextBox Text="TextBox" HorizontalAlignment="Stretch" Margin="40, 0"/>
-        <TextBox Text="TextBox" HorizontalAlignment="Stretch" Margin="40, 0"/>
+    <StackPanel Width="600" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <WrapPanel>
+            <Label Content="Label:" Width="100" HorizontalAlignment="Center"/>
+            <TextBox Width="100" Text="TextBox"/>
+            <TextBox Width="100" Text="TextBox"/>
+            <TextBox Width="100" Text="TextBox"/>
+            <TextBox Width="100" Text="TextBox"/>
+            <TextBox Width="100" Text="TextBox"/>
+            <Label Content="Label:" Width="100" HorizontalAlignment="Center"/>
+            <TextBox Width="100" Text="TextBox"/>
+            <TextBox Width="100" Text="TextBox"/>
+            <TextBox Width="100" Text="TextBox"/>
+            <TextBox Width="100" Text="TextBox"/>
+            <TextBox Width="100" Text="TextBox"/>
+        </WrapPanel>
         <Button Content="Button" HorizontalAlignment="Center" Width="300"/>
-        
     </StackPanel>
+    
 </Window>
