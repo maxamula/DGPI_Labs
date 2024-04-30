@@ -6,11 +6,9 @@
         xmlns:local="clr-namespace:DGPI_Labs"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <DockPanel>
-        <Label DockPanel.Dock="Top" Content="Label" HorizontalAlignment="Center"/>
-        <TextBox Text="Text" Width="300" DockPanel.Dock="Left"/>
-        <TextBox Text="Text" Width="300" DockPanel.Dock="Right"/>
-        <Button Width="100" Height="25" VerticalAlignment="Bottom" Margin="0, 50" Content="Button"/>
-
-    </DockPanel>
+    <Canvas Background="Aqua">
+        <Label Content="Label" Canvas.Left="20" Canvas.Top="20"/>
+        <TextBox Text="Text" Canvas.Left="40" Canvas.Top="40" Width="100"/>
+        <Button Content="Button" Canvas.Left="60" Canvas.Top="60"/>
+    </Canvas>
 </Window>
