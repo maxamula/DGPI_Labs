@@ -6,9 +6,37 @@
         xmlns:local="clr-namespace:DGPI_Labs"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Canvas Background="Aqua">
-        <Label Content="Label" Canvas.Left="20" Canvas.Top="20"/>
-        <TextBox Text="Text" Canvas.Left="40" Canvas.Top="40" Width="100"/>
-        <Button Content="Button" Canvas.Left="60" Canvas.Top="60"/>
-    </Canvas>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" BorderBrush="#FFCBBEBE" BorderThickness="2" Height="60" CornerRadius="10">
+            <StackPanel Orientation="Horizontal" >
+                <Button Width="60" ToolTip="Open">
+                    <Image Source="../res/open.png"/>
+                </Button>
+                <Button Width="60" ToolTip="Clean">
+                    <Image Source="../res/clean.png"/>
+                </Button>
+                <Button Width="60" ToolTip="Copy">
+                    <Image Source="../res/copy.png"/>
+                </Button>
+                <Button Width="60" ToolTip="Paste">
+                    <Image Source="../res/paste.png"/>
+                </Button>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="1" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <TextBox Grid.Row="0" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" Text="Hello, World"/>
+                <Button Grid.Row="1" Width="60" Content="OK" Margin="10"/>
+
+            </Grid>
+        </Border>
+    </Grid>
 </Window>
