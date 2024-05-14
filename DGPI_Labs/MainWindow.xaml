@@ -4,9 +4,32 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DGPI_Labs"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        xmlns:data="clr-namespace:DGPI_Labs.Data"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <data:Database x:Name="vm"/>
+    </Window.DataContext>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <ToolBar Header="Tools" Height="35">
+            <Button Content="Add" Click="AddClick"/>
+            <Separator/>
+            <Button Content="Update" Click="UpdateClick"/>
+            <Separator/>
+            <Button Content="Delete" Click="DeleteClick"/>
+        </ToolBar>
+        <DataGrid Grid.Row="1" Margin="5" x:Name="dataGrid" SelectedItem="{Binding SelectedItem}" AutoGenerateColumns="True" ItemsSource="{Binding DataTable.DefaultView}"/>
+        <StackPanel Margin="5" Grid.Row="2">
+            <hc:TextBox Text="{Binding SelectedItem.Name}" hc:InfoElement.Title="Name" hc:InfoElement.ShowClearButton="True" hc:TitleElement.TitlePlacement="Left" hc:TitleElement.TitleWidth="100"/>
+            <hc:TextBox Text="{Binding SelectedItem.Count}" hc:InfoElement.Title="Count" hc:InfoElement.ShowClearButton="True" hc:TitleElement.TitlePlacement="Left" hc:TitleElement.TitleWidth="100"/>
+            <hc:TextBox Text="{Binding SelectedItem.Units}" hc:InfoElement.Title="Units" hc:InfoElement.ShowClearButton="True" hc:TitleElement.TitlePlacement="Left" hc:TitleElement.TitleWidth="100"/>
+            <hc:TextBox Text="{Binding SelectedItem.Price}" hc:InfoElement.Title="Price" hc:InfoElement.ShowClearButton="True" hc:TitleElement.TitlePlacement="Left" hc:TitleElement.TitleWidth="100"/>
+        </StackPanel>
     </Grid>
 </Window>

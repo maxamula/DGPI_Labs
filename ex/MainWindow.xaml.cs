@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DGPI_Labs
+namespace ex
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -24,9 +24,5 @@ namespace DGPI_Labs
         {
             InitializeComponent();
         }
-
-        private void AddClick(object sender, RoutedEventArgs e) => vm.AddItem();
-        private void UpdateClick(object sender, RoutedEventArgs e) => vm.UpdateSelectedItem();
-        private void DeleteClick(object sender, RoutedEventArgs e) => vm.DeleteSelectedItem();
     }
 }
