@@ -17,13 +17,15 @@
             <RowDefinition/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <ToolBar Header="Tools" Height="35">
-            <Button Content="Add" Click="AddClick"/>
-            <Separator/>
-            <Button Content="Update" Click="UpdateClick"/>
-            <Separator/>
-            <Button Content="Delete" Click="DeleteClick"/>
-        </ToolBar>
+        <ToolBarTray>
+            <ToolBar Header="Tools" Height="35">
+                <Button Content="Add" Click="AddClick"/>
+                <Separator/>
+                <Button Content="Update" Click="UpdateClick"/>
+                <Separator/>
+                <Button Content="Delete" Click="DeleteClick"/>
+            </ToolBar>
+        </ToolBarTray>
         <DataGrid Grid.Row="1" Margin="5" x:Name="dataGrid" SelectedItem="{Binding SelectedItem}" AutoGenerateColumns="True" ItemsSource="{Binding DataTable.DefaultView}"/>
         <StackPanel Margin="5" Grid.Row="2">
             <hc:TextBox Text="{Binding SelectedItem.Name}" hc:InfoElement.Title="Name" hc:InfoElement.ShowClearButton="True" hc:TitleElement.TitlePlacement="Left" hc:TitleElement.TitleWidth="100"/>
