@@ -17,6 +17,7 @@
         <local:PasteCommand x:Key="PasteCommand"/>
         <local:OpenCommand x:Key="OpenCommand"/>
         <local:CleanCommand x:Key="CleanCommand"/>
+        <local:SaveCommand x:Key="SaveCommand"/>
     </Window.Resources>
 
     <Grid>
@@ -51,7 +52,7 @@
                 <TextBox x:Name="tbEdit" Grid.Row="0" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" Text="Hello, World"/>
                 <DockPanel Grid.Row="1">
                     <Slider DockPanel.Dock="Left" Width="100" Minimum="10" Maximum="60" Value="{Binding FontSize, ElementName=tbEdit}"/>
-                    <Button  Width="60" Content="OK" Margin="10"/>
+                    <Button  Width="60" Command="{StaticResource SaveCommand}" CommandParameter="{Binding ElementName=tbEdit}" Content="OK" Margin="10"/>
                 </DockPanel>
                 
             </Grid>

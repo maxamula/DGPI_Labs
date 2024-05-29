@@ -91,4 +91,27 @@ namespace DGPI_Labs
             }
         }
     }
+
+    public class SaveCommand : ICommand
+    {
+        public event EventHandler CanExecuteChanged;
+
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+
+        public void Execute(object parameter)
+        {
+            if (parameter is System.Windows.Controls.TextBox textBox)
+            {
+                Microsoft.Win32.SaveFileDialog saveFileDialog = new Microsoft.Win32.SaveFileDialog();
+                saveFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+                if (saveFileDialog.ShowDialog() == true)
+                {
+                    System.IO.File.WriteAllText(saveFileDialog.FileName, textBox.Text);
+                }
+            }
+        }
+    }
 }
